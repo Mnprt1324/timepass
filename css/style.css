@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.nav_outer {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 70px;
+    padding: 5px;
+    background-color: rgb(15, 14, 14);
+    color: white;
+    position: fixed;
+    top: 0px;
+
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+.P_chacter {
+    color: rgb(235, 244, 0);
+    font-size: 2rem;
+    animation: logo_animate 7s infinite;
+}
+
+.text {
+    font-size: 1.5rem;
+}
+
+.nav-option {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0px 5px 0px 5px;
+}
+
+.nav_link {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border: 1px solid rgb(15, 14, 14);
+
+}
+
+.nav_link:hover {
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+#section1 {
+    width: 100%;
+    height: 600px;
+    --color: rgba(114, 114, 114, 0.3);
+    background-color: #191a1a;
+    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent),
+        linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent);
+    background-size: 55px 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.img1{
+    height: 400px;
+}
+
+.img1 img {
+    height: 400px;
+    border-radius: 50%;
+    box-shadow: 0px 10px 10px 10px white;
+    animation:shadow_ani 5s infinite ;
+}
+
+.bio-text{
+    color: white;
+    font-size: 3rem;
+}
+.bio-text1{
+    color: aqua;
+    animation: bio-text-ani 5s  infinite;
+}
+#section2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(3,3,24,1) 35%, rgba(39,113,129,1) 86%);
+
+}
+.card{
+  width: 200px;
+  background-color:white;
+  padding: 10px;
+  box-shadow: rgba(12, 12, 12, 0.933) 5px 2px 3px 2px;
+  border-radius:5px; 
+}
+.card-title{
+  padding: 5px;
+}
+.card-content{
+ padding: 5px 10px 5px 10px ;
+
+
+}
+ .btn{
+    background-color: blue;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+ }
+ .btn:hover{
+  background-color: rgba(0, 0, 255, 0.652);
+
+ }
+
+@keyframes logo_animate {
+    0% {
+        color: red;
+        font-size: 1.5rem;
+    }
+
+    25% {
+        color: green;
+        font-size: 1.1rem;
+        transform: rotatex(60deg);
+    }
+
+    50% {
+        color: blue;
+        font-size: 2rem;
+        transform: rotateX(180deg);
+    }
+
+    100% {
+        color: yellow;
+        font-size: 1.5rem;
+    }
+}
+.footer{
+   width: 100%;
+   height: 50px;
+   background-color: #191a1a;
+   color: white;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes shadow_ani {
+    0% {
+        box-shadow: -10px 10px 10px 10px rgb(180, 234, 18);
+    }
+
+    25% {
+        box-shadow: 10px -10px 10px 10px rgb(177, 24, 24);
+    }
+
+    50% {
+        box-shadow: 10px 10px -10px 10px rgb(44, 13, 136);
+    }
+
+    100% {
+        box-shadow: 10px 10px 10px -10px rgb(29, 178, 201);
+    }
+}
+@keyframes bio-text-ani{
+    0% {
+         transform:translate(50px, -26px) scale(1.1, 1.1) skew(0deg, 2deg);
+    }
+
+    25% { 
+        color: azure;
+  
+    }
+
+    50% {
+        transform:translate(60px, -26px) scale(1.2, 1.1) skew(0deg, 2deg);
+    }
+
+    100% {
+        color: blueviolet;
+    }
+}
+@media screen and (max-width:992px){
+
+  #section1{
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 3rem;
+  }
+  .img1 img {
+    margin-top: 1.5rem;
+    height: 300px;
+  }
+
+}
+@media screen and (max-width:800px) {
+      
+   #section2{
+    flex-direction: column;
+    height: auto;
+    padding-top: 50px; 
+   } 
+
+   .card{
+    width: 50%;
+    height: auto;
+    margin-bottom: 40px;
+
+   }
+   .nav-option{
+    display: none;
+   }
+   .nav_outer{
+     max-width: 800px;
+   }
+}
+@media screen and (max-width:580px) {
+      
+   #section2{
+    flex-direction: column;
+    height: auto;
+    padding-top: 50px; 
+   } 
+
+   .card{
+    width: 70%;
+    height: auto;
+    margin-bottom: 40px;
+
+   }
+   .nav-option{
+    display: none;
+   }
+}
+@media screen and (max-width:450px) {  
+  .bio-text{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+}
+
